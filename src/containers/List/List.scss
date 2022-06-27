@@ -1,0 +1,36 @@
+@import '../../variables.scss';
+
+.List {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    width: 2em;
+    padding: 2em;
+    margin: 1em auto;
+    background-color: $secondary;
+    color: white;
+    border-radius: 1em;
+
+    .listInput {
+        height: 2em;
+        width: 22em;
+        border: 0px;
+        background-color: white;
+        font-size: 18px;
+        border-radius: .2em;
+    }
+
+    .listBtn {
+        @include btn;
+    }
+
+    .newContent {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2em;
+
+    }
+
+}

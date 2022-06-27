@@ -1,0 +1,10 @@
+@import '../../variables.scss';
+
+.ItemCard {
+    background-color: $lighter;
+    max-width: 25em;
+    padding: .2em;
+    margin: .2em;
+    color: black;
+    border-radius: .5em;
+}

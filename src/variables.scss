@@ -1,0 +1,12 @@
+$primary: rgb(225, 116, 43);
+$secondary: rgb(82, 83, 85);
+$lighter: rgb(227, 227, 226);
+
+@mixin btn($color: $primary) {
+    background-color: $color;
+    border: 0;
+    color: white;
+    margin-top: .2em;
+    border-radius: .2em;
+}
+

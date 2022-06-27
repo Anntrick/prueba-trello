@@ -1,0 +1,7 @@
+@import '../../variables.scss';
+
+.Home {
+    .btnEj {
+        @include btn($color: red);
+    }
+}
