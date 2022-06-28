@@ -1,4 +1,4 @@
-import { useState } from "react"
+//import { useState } from "react"
 import { useSelector, useDispatch } from 'react-redux'
 import './List.scss'
 
@@ -23,9 +23,15 @@ const List = props => {
         })*/
     }
 
+    const handleTaskChange = (event) => {
+        if(event.key === "Enter") {
+            saveInput()
+        }
+    }
+
     const saveInput = () => {
         dispatch(changeInput(""))
-        dispatch(addTask([ ...list, input ]))
+        dispatch(addTask(input))
 
         //En el array, ...data.list nos incluye todo el array
         // y simplemente añadimos lo nuevo detrás
@@ -47,7 +53,7 @@ const List = props => {
                 }
             </div>
             <div className="newContent">
-                <input className="listInput" placeholder="Nueva tarea" type="text" name="task" onChange={handleChange} value={input} />
+                <input className="listInput" onKeyPress={handleTaskChange} placeholder="Nueva tarea" type="text" name="task" onChange={handleChange} value={input} />
                 <button className="listBtn" onClick={saveInput}>Guardar</button>
             </div>
         </div>
@@ -55,3 +61,4 @@ const List = props => {
 }
 
 export default List
+
